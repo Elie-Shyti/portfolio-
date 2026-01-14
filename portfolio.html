@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Elie Shyti - Développeur SIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        bgDark: '#0a0a0a',
+                        cardDark: '#171717',
+                        accent: '#3b82f6',
+                        accentHover: '#2563eb',
+                        textGray: '#a3a3a3'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #e5e5e5; }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 top-0 left-0 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter hover:text-accent transition">
+                ES<span class="text-accent">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-white transition">À propos</a>
+                <a href="#cv" class="hover:text-white transition text-accent">Mon CV</a>
+                <a href="#skills" class="hover:text-white transition">Compétences & E4</a>
+                <a href="#parcours" class="hover:text-white transition">Parcours</a>
+                <a href="#projets" class="hover:text-white transition">Projets</a>
+                <a href="#veille" class="hover:text-white transition">Veille</a>
+            </div>
+            <a href="mailto:shytielie@yahoo.com" class="hidden md:inline-block px-5 py-2 rounded-full bg-accent/10 text-accent font-semibold text-sm border border-accent/20 hover:bg-accent hover:text-white transition duration-300">
+                Me contacter
+            </a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 relative overflow-hidden">
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]"></div>
+
+        <span class="px-3 py-1 rounded-full border border-gray-700 bg-gray-900/50 text-xs font-medium text-gray-400 mb-6">
+            Étudiant BTS SIO SLAM - Session 2025
+        </span>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+            Bonjour, je suis <span class="gradient-text">Elie Shyti</span>
+        </h1>
+        <p class="text-lg md:text-xl text-textGray max-w-2xl mb-10 leading-relaxed">
+            Passionné par le développement d'applications web et logicielles. 
+            Je transforme des problèmes complexes en solutions simples et élégantes.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="./documents/CV_Elie_shyti.pdf" download class="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition shadow-lg flex items-center justify-center gap-2">
+                <i class="fas fa-file-download"></i> Télécharger mon CV
+            </a>
+            
+            <a href="#projets" class="px-8 py-3 rounded-lg bg-accent hover:bg-accentHover text-white font-semibold transition shadow-lg shadow-blue-500/25">
+                Voir mes projets
+            </a>
+            <a href="https://github.com/Elie-Shyti" target="_blank" class="px-8 py-3 rounded-lg bg-cardDark border border-gray-800 hover:border-gray-600 text-white font-medium transition flex items-center justify-center gap-2">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="pt-24 pb-12 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+            <span class="text-accent">01.</span> À propos
+        </h2>
+        <div class="bg-cardDark p-8 rounded-2xl border border-gray-800 shadow-xl">
+            <p class="text-textGray text-lg leading-relaxed mb-6">
+                Actuellement étudiant en deuxième année de BTS Services Informatiques aux Organisations (option SLAM), je me spécialise dans le développement backend et frontend.
+            </p>
+            <p class="text-textGray text-lg leading-relaxed">
+                Basé à **Genilac (42)**, j'ai eu l'opportunité d'appliquer mes compétences lors de stages concrets, allant de la création de sites vitrines à des applications de visite virtuelle pour l'industrie. Je suis curieux, rigoureux et toujours en veille sur les nouvelles technologies comme la Blockchain.
+            </p>
+        </div>
+    </section>
+
+    <section id="cv" class="py-12 max-w-4xl mx-auto px-6">
+        <div class="bg-gradient-to-r from-gray-900 to-cardDark border border-gray-800 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 hover:border-accent/30 transition duration-300">
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex h-20 w-20 bg-gray-800 rounded-full items-center justify-center text-accent shadow-lg shadow-blue-500/10">
+                    <i class="fas fa-user-tie text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Mon Curriculum Vitae</h3>
+                    <p class="text-gray-400 text-sm">Téléchargez la version PDF complète de mon parcours, mes compétences détaillées et mes expériences professionnelles.</p>
+                </div>
+            </div>
+            
+            <a href="./documents/CV_Elie_shyti.pdf" download class="whitespace-nowrap px-6 py-3 bg-accent hover:bg-accentHover text-white font-semibold rounded-lg transition shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                <i class="fas fa-download"></i> Obtenir le PDF
+            </a>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-cardDark/30 border-y border-gray-800/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <h2 class="text-3xl font-bold text-center md:text-left">Compétences Techniques & E4</h2>
+                <a href="./documents/tableau_e4.xlsx" download class="mt-4 md:mt-0 flex items-center gap-3 px-5 py-3 bg-green-600/10 border border-green-600/30 text-green-400 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">
+                    <i class="fas fa-file-excel text-xl"></i>
+                    <div class="text-left">
+                        <span class="block text-xs font-bold uppercase tracking-wide opacity-80">Document Officiel</span>
+                        <span class="font-bold">Télécharger mon Tableau E4</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cardDark p-6 rounded-xl border border-gray-800 hover:border-accent/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition">
+                        <i class="fas fa-desktop text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-gray-300">HTML5</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-gray-300">CSS3 / Tailwind</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-yellow-500/90">JavaScript</span>
+                    </div>
+                </div>
+                <div class="bg-cardDark p-6 rounded-xl border border-gray-800 hover:border-accent/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition">
+                        <i class="fas fa-server text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-purple-400">PHP</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-red-400">Laravel</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-blue-300">Python</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm text-orange-300">SQL / MySQL</span>
+                    </div>
+                </div>
+                <div class="bg-cardDark p-6 rounded-xl border border-gray-800 hover:border-accent/50 transition duration-300 group">
+                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500/20 transition">
+                        <i class="fas fa-tools text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Outils & Certifs</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm">Git & GitHub</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm">VS Code</span>
+                        <span class="px-3 py-1 bg-gray-800 rounded-md text-sm border border-green-900 text-green-400">SecNumAcadémie</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours" class="py-24 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+            <span class="text-accent">02.</span> Mon Parcours
+        </h2>
+        <div class="relative border-l-2 border-gray-800 ml-4 space-y-12">
+            <div class="relative pl-8">
+                <span class="absolute -left-[9px] top-1 w-4 h-4 bg-accent rounded-full ring-4 ring-bgDark"></span>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                    <h3 class="text-xl font-bold text-white">Stage Développeur Web</h3>
+                    <span class="text-sm text-accent font-mono">2ème Année</span>
+                </div>
+                <p class="text-gray-400 font-medium mb-2">Entreprise AMG (Industrie)</p>
+                <p class="text-textGray text-sm">
+                    Conception d'une application de <strong>visite virtuelle</strong> pour les clients internationaux. 
+                    Technologies : Web, Base de données.
+                </p>
+            </div>
+            <div class="relative pl-8">
+                <span class="absolute -left-[9px] top-1 w-4 h-4 bg-gray-600 rounded-full ring-4 ring-bgDark"></span>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                    <h3 class="text-xl font-bold text-white">Stage Intégrateur Web</h3>
+                    <span class="text-sm text-gray-500 font-mono">1ère Année</span>
+                </div>
+                <p class="text-gray-400 font-medium mb-2">Tipi Lodge</p>
+                <p class="text-textGray text-sm">
+                    Création complète et mise en ligne du site vitrine pour la location de chalets.
+                    <a href="https://tipi-lodge.fr" class="text-accent hover:underline ml-1">Voir le site</a>
+                </p>
+            </div>
+            <div class="relative pl-8">
+                <span class="absolute -left-[9px] top-1 w-4 h-4 bg-gray-600 rounded-full ring-4 ring-bgDark"></span>
+                <h3 class="text-xl font-bold text-white">BTS SIO Option SLAM</h3>
+                <p class="text-gray-400 font-medium">Lycée Georges Brassens</p>
+                <p class="text-textGray text-sm mt-1">Acquisition des fondamentaux du développement et gestion de projet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-24 bg-cardDark/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+                <span class="text-accent">03.</span> Projets Réalisés
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="group bg-cardDark rounded-xl overflow-hidden border border-gray-800 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-indigo-900/40 to-black flex items-center justify-center">
+                        <i class="fas fa-vr-cardboard text-4xl text-indigo-500"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-accent transition">Visite Virtuelle AMG</h3>
+                        <p class="text-textGray text-sm mb-4 flex-1">Application de visite virtuelle à 360° pour les clients internationaux d'AMG. Interface immersive et interactive.</p>
+                        
+                        <div class="mt-auto">
+                            <div class="flex gap-2 text-xs font-mono mb-4">
+                                <span class="px-2 py-1 bg-yellow-900/20 text-yellow-400 rounded">JS</span>
+                                <span class="px-2 py-1 bg-purple-900/20 text-purple-400 rounded">PHP</span>
+                                <span class="px-2 py-1 bg-blue-900/20 text-blue-400 rounded">MySQL</span>
+                            </div>
+                            <a href="https://github.com/Elie-Shyti/visite-virtuelle-amg" target="_blank" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg flex items-center justify-center gap-2 transition text-sm font-medium border border-gray-700">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-cardDark rounded-xl overflow-hidden border border-gray-800 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-red-900/40 to-black flex items-center justify-center">
+                        <span class="text-4xl font-bold text-red-500">NETFLIX</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-accent transition">Clone Interface</h3>
+                        <p class="text-textGray text-sm mb-4 flex-1">Reproduction fidèle de l'interface utilisateur de Netflix en mettant l'accent sur le responsive design.</p>
+                        <div class="mt-auto">
+                            <div class="flex gap-2 text-xs font-mono mb-4">
+                                <span class="px-2 py-1 bg-red-900/20 text-red-400 rounded">HTML</span>
+                                <span class="px-2 py-1 bg-red-900/20 text-red-400 rounded">CSS</span>
+                                <span class="px-2 py-1 bg-yellow-900/20 text-yellow-400 rounded">JS</span>
+                            </div>
+                            <a href="https://github.com/Elie-Shyti/netflix" target="_blank" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg flex items-center justify-center gap-2 transition text-sm font-medium border border-gray-700">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-cardDark rounded-xl overflow-hidden border border-gray-800 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-blue-900/40 to-black flex items-center justify-center">
+                        <span class="text-3xl font-bold text-blue-500">WoodyCraft</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-accent transition">E-Commerce WoodyCraft</h3>
+                        <p class="text-textGray text-sm mb-4 flex-1">Application complète de vente en ligne. Gestion catalogue, panier utilisateur et panel administrateur.</p>
+                        <div class="mt-auto">
+                            <div class="flex gap-2 text-xs font-mono mb-4">
+                                <span class="px-2 py-1 bg-red-900/20 text-red-400 rounded">Laravel</span>
+                                <span class="px-2 py-1 bg-blue-900/20 text-blue-400 rounded">MySQL</span>
+                                <span class="px-2 py-1 bg-purple-900/20 text-purple-400 rounded">PHP</span>
+                            </div>
+                            <a href="https://github.com/Elie-Shyti/WoodyCraft" target="_blank" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg flex items-center justify-center gap-2 transition text-sm font-medium border border-gray-700">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-cardDark rounded-xl overflow-hidden border border-gray-800 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-green-900/40 to-black flex items-center justify-center">
+                        <i class="fas fa-dice text-4xl text-green-500"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-accent transition">Monopoly POO</h3>
+                        <p class="text-textGray text-sm mb-4 flex-1">Logique complète du jeu de plateau développée en Python en utilisant la Programmation Orientée Objet.</p>
+                        <div class="mt-auto">
+                            <div class="flex gap-2 text-xs font-mono mb-4">
+                                <span class="px-2 py-1 bg-green-900/20 text-green-400 rounded">Python</span>
+                                <span class="px-2 py-1 bg-blue-900/20 text-blue-300 rounded">POO</span>
+                            </div>
+                            <a href="https://github.com/Matmat42/Monopoly" target="_blank" class="w-full py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg flex items-center justify-center gap-2 transition text-sm font-medium border border-gray-700">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-cardDark rounded-xl overflow-hidden border border-gray-800 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
+                        <i class="fas fa-id-card text-4xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 group-hover:text-accent transition">Mon Portfolio</h3>
+                        <p class="text-textGray text-sm mb-4 flex-1">Conception et développement de ce site web personnel responsive.</p>
+                        <div class="mt-auto">
+                            <div class="flex gap-2 text-xs font-mono mb-4">
+                                <span class="px-2 py-1 bg-cyan-900/20 text-cyan-400 rounded">Tailwind</span>
+                                <span class="px-2 py-1 bg-orange-900/20 text-orange-400 rounded">HTML5</span>
+                            </div>
+                            <span class="w-full py-2 bg-gray-900/50 text-gray-500 rounded-lg flex items-center justify-center gap-2 text-sm font-medium border border-gray-800 cursor-default">
+                                <i class="fas fa-check"></i> En ligne
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille" class="py-24 max-w-5xl mx-auto px-6">
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold mb-2 flex items-center gap-3">
+                <span class="text-accent">04.</span> Veille Technologique
+            </h2>
+            <div class="inline-flex items-center gap-2 text-sm text-gray-400">
+                <i class="fas fa-rss text-accent"></i>
+                <span>Sujet : La Blockchain</span>
+            </div>
+        </div>
+
+        <div class="space-y-8 border-l-2 border-gray-800 ml-4 pl-8 md:pl-0 border-none md:border-none">
+            
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <div class="md:w-40 flex-shrink-0 pt-2 relative">
+                    <div class="hidden md:block absolute right-0 top-4 w-6 h-0.5 bg-gray-800"></div>
+                    <span class="text-3xl font-bold text-white block">05 FÉV</span>
+                    <span class="text-sm text-accent uppercase font-bold">2025</span>
+                </div>
+                <div class="flex-1 bg-cardDark p-6 rounded-xl border border-gray-800 w-full hover:border-accent/50 transition duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Fondamentaux : Qu'est-ce que la blockchain ?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                        Technologie de stockage et de transmission d’informations **transparente, décentralisée et sans tiers de confiance**. Contrairement aux banques, la validation est assurée par un réseau de nœuds (ordinateurs).
+                    </p>
+                    <a href="https://cryptoast.fr/qu-est-ce-que-la-blockchain/" target="_blank" class="text-xs text-accent hover:underline"><i class="fas fa-link mr-1"></i> Source : Cryptoast</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <div class="md:w-40 flex-shrink-0 pt-2 relative">
+                    <div class="hidden md:block absolute right-0 top-4 w-6 h-0.5 bg-gray-800"></div>
+                    <span class="text-3xl font-bold text-white block">19 FÉV</span>
+                    <span class="text-sm text-purple-400 uppercase font-bold">2025</span>
+                </div>
+                <div class="flex-1 bg-cardDark p-6 rounded-xl border border-gray-800 w-full hover:border-accent/50 transition duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Innovations 2025 & BaaS</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                        Transition vers le **Blockchain as a Service** (BaaS) pour les entreprises. La **DeFi** s'étend désormais à la santé (données sécurisées), aux jeux vidéo (Play-to-Earn) et à l'immobilier tokenisé.
+                    </p>
+                    <a href="https://www.objetconnecte.com/innovations-technologie-blockchain-2025/" target="_blank" class="text-xs text-accent hover:underline"><i class="fas fa-link mr-1"></i> Source : ObjetConnecté</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <div class="md:w-40 flex-shrink-0 pt-2 relative">
+                    <div class="hidden md:block absolute right-0 top-4 w-6 h-0.5 bg-gray-800"></div>
+                    <span class="text-3xl font-bold text-white block">FÉV</span>
+                    <span class="text-sm text-green-400 uppercase font-bold">2025</span>
+                </div>
+                <div class="flex-1 bg-cardDark p-6 rounded-xl border border-gray-800 w-full hover:border-accent/50 transition duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Easyport : Premier réseau privé au Havre</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                        Inauguration d'une plateforme blockchain ultra-sécurisée et éco-responsable pour le secteur maritime. Objectif : **simplifier et sécuriser les transactions** portuaires via une infrastructure décentralisée.
+                    </p>
+                    <a href="https://www.gazettenormandie.fr/article/le-havre-easyport-inaugure-le-premier-reseau-blockchain-prive" target="_blank" class="text-xs text-accent hover:underline"><i class="fas fa-link mr-1"></i> Source : Dalloz</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-6 items-start">
+                <div class="md:w-40 flex-shrink-0 pt-2 relative">
+                    <div class="hidden md:block absolute right-0 top-4 w-6 h-0.5 bg-gray-800"></div>
+                    <span class="text-3xl font-bold text-white block">02 MARS</span>
+                    <span class="text-sm text-pink-500 uppercase font-bold">2025</span>
+                </div>
+                <div class="flex-1 bg-cardDark p-6 rounded-xl border border-gray-800 w-full hover:border-accent/50 transition duration-300">
+                    <h3 class="text-xl font-bold text-white mb-3">Preuve Juridique & Droit d'auteur</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                        Décision historique du tribunal de Marseille (Affaire AZ Factory). La blockchain est officiellement reconnue comme **preuve de titularité** et d'horodatage pour protéger les droits d'auteur contre la contrefaçon.
+                    </p>
+                    <a href="https://www.dalloz-actualite.fr/flash/blockchain-au-service-de-preuve-de-titularite-d-un-droit-d-auteur" target="_blank" class="text-xs text-accent hover:underline"><i class="fas fa-link mr-1"></i> Source : Dalloz Actualité</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-textGray text-sm bg-black border-t border-gray-900">
+        <p class="mb-4">&copy; 2026 Elie Shyti. Conçu avec Tailwind CSS.</p>
+        <div class="flex justify-center space-x-6 text-xl">
+            <a href="https://github.com/Elie-Shyti" class="hover:text-white transition"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/elie-shyti-47431630a/" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:shytielie@yahoo.com" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
